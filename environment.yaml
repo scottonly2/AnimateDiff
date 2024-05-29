@@ -1,23 +1,27 @@
-name: animatediff
+name: animatediff_m3
 channels:
   - pytorch
   - nvidia
 dependencies:
   - python=3.10
-  - pytorch=1.13.1
-  - torchvision=0.14.1
-  - torchaudio=0.13.1
-  - pytorch-cuda=11.7
+  - pytorch=2.0.0
+  - torchvision
+  - torchaudio
+  # - pytorch-cuda=11.7
   - pip
   - pip:
-    - diffusers==0.11.1
-    - transformers==4.25.1
+    - diffusers
+    - transformers==4.38.1
     - xformers==0.0.16
     - imageio==2.27.0
-    - decord==0.6.0
+    - eva-decord
+    ##decord==0.6.0
+    - accelerate==0.27.2
+    - stable_diffusion_videos
     - gdown
     - einops
     - omegaconf
     - safetensors
     - gradio
     - wandb
+    - imageio-ffmpeg==0.4.9
