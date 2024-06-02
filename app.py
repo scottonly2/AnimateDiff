@@ -280,7 +280,7 @@ def ui():
             prompt_textbox = gr.Textbox(label="Prompt", lines=2)
             negative_prompt_textbox = gr.Textbox(label="Negative prompt", lines=2)
                 
-            with gr.Row().style(equal_height=False):
+            with gr.Row():  #.style(equal_height=False):
                 with gr.Column():
                     with gr.Row():
                         sampler_dropdown   = gr.Dropdown(label="Sampling method", choices=list(scheduler_dict.keys()), value=list(scheduler_dict.keys())[0])
@@ -325,4 +325,4 @@ def ui():
 
 if __name__ == "__main__":
     demo = ui()
-    demo.launch(share=True)
+    demo.launch(share=False)
